@@ -33,6 +33,11 @@ services:
         - "traefik.http.routers.librechat.tls.certresolver=le"
     networks:
       - librechat_default
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m" 
+        max-file: "3" 
 
   traefik:
     image: traefik:v3.6
@@ -63,6 +68,11 @@ services:
       - ./letsencrypt:/letsencrypt
     networks:
       - librechat_default
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m" 
+        max-file: "3" 
 
   mongodb:
     container_name: chat-mongodb
@@ -78,6 +88,11 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
     networks:
       - librechat_default
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m" 
+        max-file: "3" 
   
   meilisearch:
     container_name: chat-meilisearch
@@ -95,6 +110,11 @@ services:
       - ./meili_data_v1.12:/meili_data
     networks:
       - librechat_default
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m" 
+        max-file: "3" 
   
   vectordb:
     image: pgvector/pgvector:0.8.0-pg15-trixie
@@ -107,6 +127,11 @@ services:
       - pgdata2:/var/lib/postgresql/data
     networks:
       - librechat_default
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m" 
+        max-file: "3" 
   
   rag_api:
     image: ghcr.io/danny-avila/librechat-rag-api-dev-lite:latest
@@ -120,6 +145,11 @@ services:
       - .env
     networks:
       - librechat_default
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m" 
+        max-file: "3" 
 
 volumes:
   pgdata2:
