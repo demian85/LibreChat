@@ -5,6 +5,7 @@ services:
     # ports:
     #   - 3080:3080
     depends_on:
+      - traefik
       - mongodb
       - rag_api
     restart: always
@@ -59,7 +60,7 @@ services:
       - "443:443"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      - "./letsencrypt:/letsencrypt"
+      - ./letsencrypt:/letsencrypt
     networks:
       - librechat_default
 
