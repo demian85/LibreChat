@@ -85,6 +85,7 @@ interface:
 endpoints:
   custom:
     - name: 'Venice.ai'
+      modelDisplayLabel: 'Venice'
       apiKey: '${VENICE_API_KEY}'
       baseURL: 'https://api.venice.ai/api/v1'
       iconURL: 'https://docs.venice.ai/mintlify-assets/_mintlify/favicons/veniceai/HJGBlV4jYrSOrFXh/_generated/favicon/favicon-32x32.png'
@@ -97,13 +98,19 @@ endpoints:
         fetch: false
 
 modelSpecs:
-  addedEndpoints: ['openAI', 'google', 'anthropic', 'agents']
+  addedEndpoints: ['openAI', 'anthropic', 'google', 'agents']
   list:
+    # - name: "claude-haiku-4-5"
+    #   label: "Claude Haiku 4.5"
+    #   description: "Our fastest model with near-frontier intelligence"
+    #   group: "anthropic"
+    #   preset:
+    #     endpoint: "anthropic"
     - name: "qwen3-4b"
       label: "Venice Small"
       description: "PRIVATE | 33K context | Function Calling · Reasoning"
       group: "Venice"
-      default: true
+      # default: true
       preset:
         endpoint: "Venice.ai"
     - name: "mistral-31-24b"
