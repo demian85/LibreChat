@@ -91,6 +91,10 @@ mcpServers:
     headers:
       Authorization: 'Bearer ${NUTRIBOT_MCP_SERVER_API_KEY}'
 
+mcpSettings:
+  allowedDomains:
+    - "host.docker.internal"
+
 # Definition of custom endpoints
 endpoints:
   custom:
