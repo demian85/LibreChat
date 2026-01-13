@@ -81,6 +81,16 @@ interface:
   # Temporary chat retention period in hours (default: 720, min: 1, max: 8760)
   # temporaryChatRetention: 1
 
+mcpServers:
+  Nutribot:
+    type: streamable-http
+    url: http://host.docker.internal:3082/mcp
+    timeout: 60000
+    serverInstructions: true
+    requiresOAuth: false
+    headers:
+      Authorization: 'Bearer ${NUTRIBOT_MCP_SERVER_API_KEY}'
+
 # Definition of custom endpoints
 endpoints:
   custom:
