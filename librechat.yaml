@@ -91,55 +91,92 @@ endpoints:
       iconURL: 'https://docs.venice.ai/mintlify-assets/_mintlify/favicons/veniceai/HJGBlV4jYrSOrFXh/_generated/favicon/favicon-32x32.png'
       models:
         default:
-          - 'mistral-31-24b'
+          - 'claude-opus-45'
+          # - 'mistral-31-24b'
           # - 'qwen3-235b-a22b-instruct-2507'
           # - 'qwen3-235b-a22b-thinking-2507'
           # - 'zai-org-glm-4.6'
-        fetch: false
+        fetch: true
 
-modelSpecs:
-  addedEndpoints: ['openAI', 'anthropic', 'google', 'agents']
-  list:
+# modelSpecs:
+#   addedEndpoints: ['openAI', 'anthropic', 'google', 'agents']
+#   list:
     # - name: "claude-haiku-4-5"
     #   label: "Claude Haiku 4.5"
     #   description: "Our fastest model with near-frontier intelligence"
     #   group: "anthropic"
     #   preset:
     #     endpoint: "anthropic"
-    - name: "qwen3-4b"
-      label: "Venice Small"
-      description: "PRIVATE | 33K context | Function Calling · Reasoning"
-      group: "Venice"
-      # default: true
-      preset:
-        endpoint: "Venice.ai"
-    - name: "mistral-31-24b"
-      label: "Venice Medium"
-      description: "PRIVATE | 131K context | Function Calling · Vision"
-      group: "Venice"
-      preset:
-        endpoint: "Venice.ai"
-    - name: "qwen3-235b-a22b-instruct-2507"
-      label: "Qwen 3 235B A22B Instruct 2507"
-      description: "PRIVATE | 131K context | Function Calling"
-      group: "Venice"
-      preset:
-        endpoint: "Venice.ai"
-    - name: "qwen3-235b-a22b-thinking-2507"
-      label: "Qwen 3 235B A22B Thinking 2507"
-      description: "PRIVATE | 131K context | Function Calling · Reasoning"
-      group: "Venice"
-      preset:
-        endpoint: "Venice.ai"
-    - name: "zai-org-glm-4.6"
-      label: "GLM 4.6"
-      description: "PRIVATE | 128K context | Flagship model for deep reasoning and production agents"
-      group: "Venice"
-      preset:
-        endpoint: "Venice.ai"
-    - name: "google-gemma-3-27b-it"
-      label: "Google Gemma 3 27B Instruct"
-      description: "PRIVATE | 203K context | Function Calling · Vision"
-      group: "Venice"
-      preset:
-        endpoint: "Venice.ai"
+    # - name: "claude-sonnet-4-5"
+    #   label: "Claude Sonnet 4.5"
+    #   description: "Our smart model for complex agents and coding"
+    #   group: "anthropic"
+    #   preset:
+    #     endpoint: "anthropic"
+    # - name: "claude-opus-4-5"
+    #   label: "Claude Opus 4.5"
+    #   description: "Premium model combining maximum intelligence with practical performance"
+    #   group: "anthropic"
+    #   preset:
+    #     endpoint: "anthropic"
+    # - name: "qwen3-4b"
+    #   label: "Venice Small"
+    #   description: "PRIVATE | 33K | Tools · Reasoning"
+    #   group: "Venice"
+    #   # default: true
+    #   preset:
+    #     endpoint: "Venice.ai"
+    # - name: "mistral-31-24b"
+    #   label: "Venice Medium"
+    #   description: "PRIVATE | 131K | Tools · Vision"
+    #   group: "Venice"
+    #   preset:
+    #     endpoint: "Venice.ai"
+    # - name: "qwen3-235b-a22b-instruct-2507"
+    #   label: "Qwen 3 235B A22B Instruct 2507"
+    #   description: "PRIVATE | 131K | Tools"
+    #   group: "Venice"
+    #   preset:
+    #     endpoint: "Venice.ai"
+    # - name: "qwen3-235b-a22b-thinking-2507"
+    #   label: "Qwen 3 235B A22B Thinking 2507"
+    #   description: "PRIVATE | 131K | Tools · Reasoning"
+    #   group: "Venice"
+    #   preset:
+    #     endpoint: "Venice.ai"
+    # - name: "zai-org-glm-4.6"
+    #   label: "GLM 4.6"
+    #   description: "PRIVATE | 128K | Tools · Reasoning"
+    #   group: "Venice"
+    #   preset:
+    #     endpoint: "Venice.ai"
+    # - name: "google-gemma-3-27b-it"
+    #   label: "Google Gemma 3 27B Instruct"
+    #   description: "PRIVATE | 203K | Tools · Vision"
+    #   group: "Venice"
+    #   preset:
+    #     endpoint: "Venice.ai"
+    # - name: "grok-41-fast"
+    #   label: "Grok 4.1 Fast"
+    #   description: "Anonymized | 262K | Tools · Reasoning · Vision"
+    #   group: "Venice"
+    #   preset:
+    #     endpoint: "Venice.ai"
+    # - name: "openai-gpt-52"
+    #   label: "GPT-5.2"
+    #   description: "Anonymized | 262K | Tools · Reasoning"
+    #   group: "Venice"
+    #   preset:
+    #     endpoint: "Venice.ai"
+    # - name: "claude-opus-45"
+    #   label: "Claude Opus 4.5"
+    #   description: "Anonymized | 203K | Tools · Reasoning · Vision · Code"
+    #   group: "Venice"
+    #   preset:
+    #     endpoint: "Venice.ai"
+    # - name: "gemini-3-pro-preview"
+    #   label: "Gemini 3 Pro Preview"
+    #   description: "Anonymized | 203K | Tools · Reasoning · Vision"
+    #   group: "Venice"
+    #   preset:
+    #     endpoint: "Venice.ai"
