@@ -75,7 +75,7 @@ services:
         max-file: "3" 
 
   mongodb:
-    image: mongo:8.0.17
+    image: mongo
     container_name: librechat-mongodb
     ports:
       - 27017:27017
