@@ -1,6 +1,6 @@
 services:
   api:
-    image: ghcr.io/danny-avila/librechat-api:latest
+    image: registry.librechat.ai/danny-avila/librechat-api:latest
     container_name: librechat
     # ports:
     #   - 3080:3080
@@ -92,7 +92,7 @@ services:
         max-file: "3" 
   
   meilisearch:
-    image: getmeili/meilisearch:v1.12.3
+    image: getmeili/meilisearch:v1.35.1
     container_name: librechat-meilisearch
     restart: always
     # ports: # Uncomment this to access meilisearch from outside docker
@@ -104,7 +104,7 @@ services:
       - MEILI_NO_ANALYTICS=true
       - MEILI_ENV=production
     volumes:
-      - ./meili_data_v1.12:/meili_data
+      - ./meili_data_v1.35.1:/meili_data
     networks:
       - librechat_default
     logging:
@@ -132,7 +132,7 @@ services:
         max-file: "3" 
   
   rag_api:
-    image: ghcr.io/danny-avila/librechat-rag-api-dev-lite:latest
+    image: registry.librechat.ai/danny-avila/librechat-rag-api-dev-lite:latest
     container_name: librechat-rag_api
     environment:
       - DB_HOST=vectordb
